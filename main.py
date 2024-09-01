@@ -1,6 +1,3 @@
-# this allows us to use code from
-# the open-source pygame library
-# throughout this file
 import pygame
 
 from constants import *
@@ -17,6 +14,7 @@ def main():
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, PLAYER_RADIUS)
 
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
