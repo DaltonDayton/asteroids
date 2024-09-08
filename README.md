@@ -49,7 +49,7 @@ This is a simple implementation of the classic Asteroids game using Python. The 
 To start the game, run the following command:
 
 ```sh
-python main.py
+poetry run python main.py
 ```
 
 ## Controls
