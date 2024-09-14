@@ -1,7 +1,7 @@
 import pygame
 
-from circleshape import CircleShape
-from constants import PLAYER_SHOOT_SPEED, SHOT_RADIUS
+from asteroids.circleshape import CircleShape
+from asteroids.constants import PLAYER_SHOOT_SPEED, SHOT_RADIUS
 
 
 class Shot(CircleShape):

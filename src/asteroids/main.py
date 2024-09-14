@@ -2,11 +2,11 @@ import sys
 
 import pygame
 
-from asteroid import Asteroid
-from asteroidfield import AsteroidField
-from constants import *
-from player import Player
-from shot import Shot
+from asteroids.asteroid import Asteroid
+from asteroids.asteroidfield import AsteroidField
+from asteroids.constants import *
+from asteroids.player import Player
+from asteroids.shot import Shot
 
 
 def main():

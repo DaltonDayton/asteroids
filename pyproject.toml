@@ -1,15 +1,24 @@
 [tool.poetry]
 name = "asteroids"
 version = "0.1.0"
-description = ""
+description = "An Asteroids game built with Python and Pygame."
 authors = ["Dalton Dayton <50755420+DaltonDayton@users.noreply.github.com>"]
 readme = "README.md"
-package-mode = false
+packages = [
+    { include = "asteroids", from = "src" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 pygame = "^2.6.0"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[tool.poetry.scripts]
+asteroids = "asteroids.main:main"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
