@@ -39,9 +39,9 @@ This is a simple implementation of the classic Asteroids game using Python. The 
    ```sh
    cd asteroids
    ```
-3. Install the required dependencies using Poetry:
+3. Install the required dependencies using uv:
    ```sh
-   poetry install
+   uv sync
    ```
 
 ## Usage
@@ -49,8 +49,28 @@ This is a simple implementation of the classic Asteroids game using Python. The 
 To start the game, run the following command:
 
 ```sh
-poetry run python main.py
+uv run asteroids
 ```
+
+## Development
+
+### Running Tests
+
+To run the test suite:
+
+```sh
+uv run --group dev pytest
+```
+
+### Building the Package
+
+To build distribution packages:
+
+```sh
+uv build
+```
+
+This will create both wheel and source distribution files in the `dist/` directory.
 
 ## Controls
 

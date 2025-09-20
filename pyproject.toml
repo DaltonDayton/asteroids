@@ -1,24 +1,28 @@
-[tool.poetry]
+[project]
 name = "asteroids"
 version = "0.1.0"
 description = "An Asteroids game built with Python and Pygame."
-authors = ["Dalton Dayton <50755420+DaltonDayton@users.noreply.github.com>"]
+authors = [
+    { name = "Dalton Dayton", email = "50755420+DaltonDayton@users.noreply.github.com" }
+]
 readme = "README.md"
-packages = [
-    { include = "asteroids", from = "src" }
+requires-python = ">=3.12"
+dependencies = [
+    "pygame>=2.6.0",
 ]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-pygame = "^2.6.0"
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+]
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
-
-[tool.poetry.scripts]
+[project.scripts]
 asteroids = "asteroids.main:main"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
 
